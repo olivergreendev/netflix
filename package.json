@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,8 +14,10 @@
     "express": "^4.17.1",
     "mongodb": "^4.1.2",
     "mongoose": "^6.0.8",
-    "nodemon": "^2.0.13",
     "sass": "^1.42.1",
     "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
