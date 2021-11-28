@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --text-color-primary: #fff;
+  --text-color-secondary: #B1C0C3;
+  --body-color: #000;
+  --dark-contrast-color-01: #252831;
+  --dark-contrast-color-02: #7AD474;
+  --text-size-01: 1rem;
+  --text-size-02: 0.75rem;
+  --text-weight-thin: 100;
+  --text-weight-extra-light: 200;
+  --text-weight-light: 300;
+  --text-weight-regular: 400;
+  --text-weight-medium: 500;
+  --text-weight-semi-bold: 600;
+  --text-weight-bold: 700;
+  --text-weight-extra-bold: 800;
+  --text-weight-black: 900;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #000;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+h1 {
+  color: var(--text-color-primary);
+  font-size: 38px;
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--text-color-primary);
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h3 {
+  color: var(--text-color-secondary);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.disable-select {
+  user-select: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+}
+
+:root {
+  --nav-width: 130px;
+  --z-fixed: 100;
+}
+
+.navbar {
+  width: var(--nav-width);
+  height: 100vh;
+  position: fixed;
+  background-color: #000;
+  z-index: 2;
+}
+
+.navbar ul li:not(:first-child):not(:last-child)::after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  background: red;
+  display: block;
+  margin: 5px auto;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  border-radius: 50%;
+}
+
+.navbar ul li .tooltip {
+  position: absolute;
+  height: 40px;
+  padding: 10px 20px;
+  background: var(--dark-contrast-color-01);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  top: 30%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 90px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  line-height: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar ul li:hover .tooltip {
+  opacity: 1;
+  left: 100px;
+}
+
+.active::after {
+  content: '';
+  width: 4px !important;
+  height: 4px !important;
+  background: red;
+  display: block;
+  margin: 5px auto;
+  border-radius: 50%;
+}
+
+.home::after {
+  content: '';
+  width: 100% !important;
+  height: 3px !important;
+  background: red;
+  display: block;
+  margin: 5px auto;
+  border-radius: 0 !important;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.nav-item:first-child {
+  margin: 50px 0;
+}
+
+.nav-item {
+  margin: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-item:last-child {
+  margin: auto 0 50px 0;
+}
+
+.nav-link img {
+  width: 22px;
+}
+
+.nav-link i {
+  font-size: 22px;
+}
+
+.content {
+  margin-left: 130px;
+  width: auto;
+  position: relative;
+  overflow: auto;
+  z-index: 1;
+  padding-top: 50px;
+  padding-right: 50px;
+}
+
+.carousel {
+  position: relative;
+  margin: 50px 0;
+}
+
+.carousel .switchLeft, .carousel .switchRight {
+  color: white;
+  font-weight: 600;
+  height: 250px;
+  width: 45px;
+  line-height: 250px;
+  font-size: 25px;
+  text-align: center;
+  background: #000;
+  font-family: inherit;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+  -webkit-transition: background 0.15s ease;
+  transition: background 0.15s ease;
+}
+
+.carousel .switchLeft:hover, .carousel .switchRight:hover {
+  background: #2A2A2A;
+}
+
+.carousel .switchLeft {
+  position: absolute;
+}
+
+.carousel .switchRight {
+  position: absolute;
+  right: 0;
+}
+
+.carousel a {
+  text-decoration: none;
+}
+
+.carousel .carousel-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 250px;
+  width: auto;
+  padding: 0 50px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  white-space: nowrap;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carousel .carousel-box::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel .carousel-box .slider-img {
+  position: relative;
+  min-width: 158px;
+  max-width: 158px;
+  height: 219px;
+  background: #1A1A1A;
+  background-size: cover;
+  margin: 0 3px;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-transition: background 0.2s ease, -webkit-transform 0.2s ease;
+  transition: background 0.2s ease, -webkit-transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.carousel .carousel-box .slider-img:hover {
+  z-index: 3;
+  background: #2A2A2A;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-radius: 6px;
+}
+
+.carousel .carousel-box .slider-img:hover a {
+  opacity: 1;
+}
+
+.carousel .carousel-box .slider-img img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 10px;
+}
+
+.carousel .carousel-box .slider-img a {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 6px 16px;
+  border-radius: 50%;
+  background: #232323;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  -webkit-transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.carousel .carousel-box .slider-img a:hover {
+  background: #fff;
+  color: #000;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+/*# sourceMappingURL=style.css.map */
