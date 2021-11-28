@@ -4,7 +4,7 @@ const path = require('path');
 const favicon = require('serve-favicon');
 // App Variables
 const app = express();
-const port = "8080" || "8000"; // process.env.PORT
+const port = process.env.PORT || "8000";
 // App Configuration
 app.set("views", path.join(__dirname, "views/pages"));
 app.set("view engine", "ejs");
